@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+
+:root {
+  --min-item-width: 28ch;
+  --max-item-width: .5fr;
+  --grid-spacing: .25rem;
+  --item-padding: .25rem;
+}
+
+/* Let items expand on small screens */
+@media (max-width: 600px) {
+  :root {
+    --max-item-width: 1fr;
+  }
+}
+
+/* Cap item width for better appearance on large screens */
+@media (min-width: 2560px) {
+  :root {
+    --max-item-width: 300px;
+  }
+}
+
+/* Readability on 4K screens at distance */
+@media (min-width: 3840px) {
+  .item-name {
+    font-size 1.3em;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+  }
+  .wrap > .d-flex {
+    font-size: .9em;
+    font-weight: 500;
+    letter-spacing: .8px;
+  }
+}
+
+/* Grid layout */
+.monitor-list > .monitor-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--min-item-width), var(--max-item-width)));
+  grid-gap: var(--grid-spacing);
+}
+
+.item {
+  width: 100%;
+  padding: var(--item-padding) !important;
+  border: #eb661a solid 2px;
+}
+
+.item > .row {
+  flex-direction: column;
+}
+
+.row > div {
+  width: 100%;
+}
+
+/* Text readability */
+.item-name {
+  color: #f1f1f1;
+}
+
+/* Badge movement */
+.row {
+  position: relative;
+}
+body:not(.mobile) .badge {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Header compacting */
+.main {
+  position: relative;
+}
+.overall-status {
+  padding: .5rem !important;
+}
+body:not(.mobile) .overall-status {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+}
+
+/* Tweaks for mobile size */
+body.mobile {}
+
+/* Footer compacting */
+footer .alert-heading {
+  padding: 0 !important;
+}
+
+/* Margin resets */
+.mb-4, .mb-5 {
+  margin-bottom: .5rem !important;
+}
+
+.mt-4 {
+  margin-top: .5rem !important;
+}
+  
+.mt-5 {
+  margin-top: 0 !important;
+}
+
+body { 
+    background: url('https://cdn.ehrlicher.xyz/uploads/background.png') no-repeat; 
+    background-size: 5000%;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: white;
+}
+
+h2 {
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    font-size: 1.70rem;
+    font-weight: 500;
+    color: white;
+}
+
+.tag-text {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.shadow-box.list.p-4.overall-status.mb-4 {
+    font-family: 'Poppins', sans-serif;
+    color: #FFFFFF;
+    background-color: #181819;
+}
+
+.content {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: black;
+}
+
+.alert-heading {
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    font-size: 1.50rem;
+    font-weight: 600;
+    color: white;
+}
+
+.shadow-box.alert.mb-4.p-4.incident.bg-primary {
+  box-shadow: 0 0 12px #66de8b;
+}
+
+.shadow-box.alert.mb-4.p-4.incident.bg-warning {
+  box-shadow: 0 0 12px #f5a440;
+}
+
+.shadow-box.alert.mb-4.p-4.incident.bg-danger {
+  box-shadow: 0 0 12px #bb2124;
+}
+
+.shadow-box.alert.mb-4.p-4.incident.bg-info {
+  box-shadow: 0 0 12px #5bc0de;
+}
+
+.item-name {
+    font-family: 'Poppins', sans-serif;
+    color: #bababa;
+    font-weight: 500;
+}
+
+.shadow-box.monitor-list.mt-4.position-relative {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    background-color: #141519;
+}
