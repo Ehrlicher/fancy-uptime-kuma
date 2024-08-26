@@ -5,4 +5,5 @@ Description:
 
 > Credits 
 Made with <3 by Ehrlicher
+
 with custom boxes: https://klein.ruhr/custom-css-within-uptime-kuma/
